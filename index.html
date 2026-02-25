@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SR Restaurants - Order Food</title>
+
+<style>
+
+/* ===== GLOBAL STYLES ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0f0f0f;
+    color: #ffffff;
+}
+
+h2 {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #c59d5f;
+    padding-bottom: 5px;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #111;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+.logo img {
+    width: 140px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background-color: #1a1a1a;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-left a, .nav-right a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-left a:hover, .nav-right a:hover {
+    color: #c59d5f;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 30px;
+    padding: 40px 60px;
+}
+
+/* ===== SIDE PANELS ===== */
+.side-panel {
+    background-color: #1b1b1b;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* ===== MENU SECTION ===== */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.food-card {
+    background-color: #1b1b1b;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 0 8px rgba(0,0,0,0.6);
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(197,157,95,0.4);
+}
+
+.food-card h3 {
+    margin: 0;
+    color: #c59d5f;
+}
+
+.price {
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+.order-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background-color: #c59d5f;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #a67c39;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    border-top: 1px solid #333;
+    margin-top: 40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="SR Restaurants Logo">
+    </div>
+</header>
+
+<div class="nav-container">
+    <div class="nav-left">
+        <a href="#">Ordered Items</a>
+        <a href="#">Info</a>
+    </div>
+    <div class="nav-right">
+        <a href="#">Contact</a>
+        <a href="#">My Orders</a>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- LEFT PANEL -->
+    <div class="side-panel">
+        <h2>Ordered Items</h2>
+        <p>Your selected items will appear here.</p>
+
+        <h2>Restaurant Info</h2>
+        <p>Authentic Tamil Nadu Cuisine.</p>
+        <p>Open: 10:00 AM - 11:00 PM</p>
+    </div>
+
+    <!-- MENU SECTION -->
+    <div class="menu">
+
+        <div class="food-card">
+            <h3>Chicken Biryani</h3>
+            <div class="price">₹220</div>
+            <div class="order-controls">
+                <input type="number" min="1" value="1">
+                <button>Order</button>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <h3>Mutton Biryani</h3>
+            <div class="price">₹320</div>
+            <div class="order-controls">
+                <input type="number" min="1" value="1">
+                <button>Order</button>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <h3>Dosa</h3>
+            <div class="price">₹80</div>
+            <div class="order-controls">
+                <input type="number" min="1" value="1">
+                <button>Order</button>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <h3>Idli (2 pcs)</h3>
+            <div class="price">₹40</div>
+            <div class="order-controls">
+                <input type="number" min="1" value="1">
+                <button>Order</button>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <h3>Parotta with Salna</h3>
+            <div class="price">₹120</div>
+            <div class="order-controls">
+                <input type="number" min="1" value="1">
+                <button>Order</button>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <h3>Filter Coffee</h3>
+            <div class="price">₹30</div>
+            <div class="order-controls">
+                <input type="number" min="1" value="1">
+                <button>Order</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="side-panel">
+        <h2>Contact</h2>
+        <p>Phone: +91 9876543210</p>
+        <p>Email: srrestaurants@gmail.com</p>
+
+        <h2>My Orders</h2>
+        <p>Track your current and past orders here.</p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 SR Restaurants | Premium Tamil Cuisine
+</footer>
+
+</body>
+</html>
